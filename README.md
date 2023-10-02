@@ -1,1 +1,3 @@
 # Catch-Phrase
+
+npm start
