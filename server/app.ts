@@ -1,19 +1,21 @@
+require('dotenv').config()
 import express from 'express';
-import path from 'path';
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 
-// Serve static files from the React app
-app.use(express.static(path.join(__dirname, '../client/build')));
+//middleware
+app.use((req, res, next) => {
+  console.log(req.path, req.method)
+  next()
+})
 
-// Define your API routes here...
+// GET routes
+app.get('/', (req, res) => {
+  res.json('Welcome')
+})
 
-// Handle other routes and return the React app
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
-});
-
+// requests
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
