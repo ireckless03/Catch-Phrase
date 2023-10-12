@@ -1,5 +1,5 @@
 // src/seed/playersSeed.ts
-import { PlayerModel } from '../models/PlayersModel';
+import { PlayerModel } from "../models/PlayersModel";
 
 // Function to seed Player data
 const playersSeed = async () => {

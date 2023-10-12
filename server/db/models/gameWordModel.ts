@@ -1,4 +1,4 @@
-// src/models/WordsModel.ts
+// src/models/gameWords.ts
 import { Schema, Document, model } from 'mongoose';
 
 // Define the shape of a GameWord document
