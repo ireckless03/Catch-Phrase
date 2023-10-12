@@ -1,19 +1,21 @@
-require('dotenv').config()
+require('dotenv').config();
 import express from 'express';
-
+import Mongo from './db/db';
 const app = express();
 const PORT = process.env.PORT;
 
+// connect to database
+Mongo();
 //middleware
 app.use((req, res, next) => {
-  console.log(req.path, req.method)
-  next()
-})
+  console.log(req.path, req.method);
+  next();
+});
 
 // GET routes
 app.get('/', (req, res) => {
-  res.json('Welcome')
-})
+  res.json('Welcome');
+});
 
 // requests
 app.listen(PORT, () => {

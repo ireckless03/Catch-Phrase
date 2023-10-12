@@ -1,6 +1,6 @@
-import React from 'react';
 import styles from './HomePage.module.css';
 import Button from '../components/Button';
+import { Link } from 'react-router-dom';
 
 function HomePage() {
   return (
