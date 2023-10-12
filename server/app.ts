@@ -5,7 +5,7 @@ const app = express();
 const PORT = process.env.PORT;
 
 // connect to database
-Mongo();
+Mongo().catch(console.dir);
 //middleware
 app.use((req, res, next) => {
   console.log(req.path, req.method);
